@@ -1,11 +1,10 @@
-/* Reset default styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Set background color and font for the body */
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
@@ -13,13 +12,13 @@ body {
   line-height: 1.6;
 }
 
-/* General image styling */
+
 img {
   max-width: 100%;
   display: block;
 }
 
-/* Header styling */
+
 header {
   background-color: #1f2937;
   color: white;
@@ -52,7 +51,7 @@ header .whatsapp-button:hover {
   background-color: #1ebe5d;
 }
 
-/* Navbar styling */
+
 .navbar {
   display: flex;
   justify-content: center;
@@ -73,7 +72,7 @@ header .whatsapp-button:hover {
   color: #25D366;
 }
 
-/* Section styling */
+
 .layanan,
 .testimoni,
 .galeri,
@@ -98,7 +97,7 @@ header .whatsapp-button:hover {
   color: black;
 }
 
-/* Testimonial styling */
+
 .testimoni {
   background-color: #e8f5e9;
   text-align: center;
@@ -119,10 +118,10 @@ header .whatsapp-button:hover {
   left: 0;
 }
 
-/* Gallery styling */
+
 .galeri-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 10px;
   margin-top: 20px;
 }
@@ -130,10 +129,11 @@ header .whatsapp-button:hover {
 .galeri img {
   border-radius: 8px;
   height: 180px;
-  object-fit: cover;
+  object-fit: cover; 
+  width: 100%; 
 }
 
-/* Contact form styling */
+
 .kontak form {
   display: flex;
   flex-direction: column;
@@ -162,7 +162,7 @@ header .whatsapp-button:hover {
   background-color: #333;
 }
 
-/* Footer styling */
+
 footer {
   background-color: #1f2937;
   color: white;
@@ -171,7 +171,7 @@ footer {
   margin-top: 40px;
 }
 
-/* Responsive design for small screens */
+
 @media (max-width: 480px) {
   .logo {
     width: 80px;
