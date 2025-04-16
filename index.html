@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Header Section -->
   <header>
     <img src="logo.png" alt="Logo Baoh Computer" class="logo" />
     <h1>Baoh Computer</h1>
@@ -16,6 +17,7 @@
     </a>
   </header>
 
+  <!-- Navigation Menu -->
   <nav class="navbar">
     <a href="#layanan">Layanan</a>
     <a href="#testimoni">Testimoni</a>
@@ -23,6 +25,7 @@
     <a href="#kontak">Kontak</a>
   </nav>
 
+  <!-- Layanan Section -->
   <section id="layanan" class="layanan" style="display: block;">
     <h2>Layanan Kami</h2>
     <ul>
@@ -34,12 +37,14 @@
     </ul>
   </section>
 
+  <!-- Testimoni Section -->
   <section id="testimoni" class="testimoni" style="display: none;">
     <h2>Testimoni Pelanggan</h2>
     <blockquote>"Pelayanan cepat dan laptop saya kembali normal!" – Rudi</blockquote>
     <blockquote>"Teknisi ramah, profesional, dan datang tepat waktu." – Sari</blockquote>
   </section>
 
+  <!-- Galeri Section -->
   <section id="galeri" class="galeri" style="display: none;">
     <h2>Galeri Foto</h2>
     <div class="galeri-grid">
@@ -49,8 +54,10 @@
     </div>
   </section>
 
+  <!-- Kontak Section -->
   <section id="kontak" class="kontak" style="display: none;">
     <h2>Hubungi Kami</h2>
+    <!-- Formulir Kontak -->
     <form action="mailto:emailanda@example.com" method="post" enctype="text/plain">
       <input type="text" name="nama" placeholder="Nama Anda" required />
       <input type="email" name="email" placeholder="Email Anda" required />
@@ -59,10 +66,12 @@
     </form>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Baoh Computer. All rights reserved.</p>
   </footer>
 
+  <!-- JavaScript for Navigation -->
   <script>
     const links = document.querySelectorAll('.navbar a');
     const sections = document.querySelectorAll('section');

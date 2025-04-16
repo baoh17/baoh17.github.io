@@ -1,183 +1,198 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set background color and font for the body */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
-  }
-  
-  img {
-    max-width: 100%;
-    display: block;
-  }
-  
-  h2 {
-    margin-top: 0;
-  }
-  
-  header {
-    background-color: #1f2937;
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
-  }
-  
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* General image styling */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Header styling */
+header {
+  background-color: #1f2937;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+header .logo {
+  width: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header .whatsapp-button {
+  display: inline-block;
+  background-color: #25D366;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+header .whatsapp-button:hover {
+  background-color: #1ebe5d;
+}
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  gap: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #1f2937;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #25D366;
+}
+
+/* Section styling */
+.layanan,
+.testimoni,
+.galeri,
+.kontak {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.layanan ul {
+  list-style: none;
+  padding: 0;
+}
+
+.layanan li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+  color: black;
+}
+
+/* Testimonial styling */
+.testimoni {
+  background-color: #e8f5e9;
+  text-align: center;
+}
+
+.testimoni blockquote {
+  font-style: italic;
+  margin: 20px 0;
+  position: relative;
+  padding-left: 20px;
+}
+
+.testimoni blockquote::before {
+  content: "\201C";
+  font-size: 24px;
+  color: #25D366;
+  position: absolute;
+  left: 0;
+}
+
+/* Gallery styling */
+.galeri-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.galeri img {
+  border-radius: 8px;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Contact form styling */
+.kontak form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.kontak input,
+.kontak textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.kontak button {
+  padding: 12px;
+  background-color: #1f2937;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.kontak button:hover {
+  background-color: #333;
+}
+
+/* Footer styling */
+footer {
+  background-color: #1f2937;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* Responsive design for small screens */
+@media (max-width: 480px) {
   .logo {
-    width: 100px;
-    border-radius: 50%;
-    margin-bottom: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    margin-left: auto;
-    margin-right: auto;
+    width: 80px;
   }
-  
+
   .whatsapp-button {
-    display: inline-block;
-    background-color: #25D366;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
+    padding: 10px 16px;
+    font-size: 14px;
   }
-  
-  .whatsapp-button:hover {
-    background-color: #1ebe5d;
-  }
-  
+
   .navbar {
-    display: flex;
-    justify-content: center;
-    background-color: #fff;
-    padding: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    gap: 20px;
-  }
-  
-  .navbar a {
-    text-decoration: none;
-    color: #1f2937;
-    font-weight: bold;
-    transition: color 0.3s ease;
-  }
-  
-  .navbar a:hover {
-    color: #25D366;
-  }
-  
-  .layanan,
-  .testimoni,
-  .galeri,
-  .kontak {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .layanan ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .layanan li {
-    padding: 10px 0;
-    border-bottom: 1px solid #ddd;
-    font-size: 16px;
-    color: black;
-  }
-  
-  .testimoni {
-    background-color: #e8f5e9;
-    text-align: center;
-  }
-  
-  .testimoni blockquote {
-    font-style: italic;
-    margin: 20px 0;
-    position: relative;
-    padding-left: 20px;
-  }
-  
-  .testimoni blockquote::before {
-    content: "\201C";
-    font-size: 24px;
-    color: #25D366;
-    position: absolute;
-    left: 0;
-  }
-  
-  .galeri-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 10px;
-    margin-top: 20px;
-  }
-  
-  .galeri img {
-    border-radius: 8px;
-    height: 180px;
-    object-fit: cover;
-  }
-  
-  .kontak form {
-    display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
   }
-  
+
+  .galeri-grid {
+    grid-template-columns: 1fr;
+  }
+
   .kontak input,
   .kontak textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    font-size: 14px;
   }
-  
-  .kontak button {
-    padding: 12px;
-    background-color: #1f2937;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .kontak button:hover {
-    background-color: #333;
-  }
-  
-  footer {
-    background-color: #1f2937;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-  }
-  
-  @media (max-width: 480px) {
-    .logo {
-      width: 80px;
-    }
-  
-    .whatsapp-button {
-      padding: 10px 16px;
-      font-size: 14px;
-    }
-  
-    .navbar {
-      flex-direction: column;
-      gap: 10px;
-    }
-  
-    .galeri-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-  
+}
