@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Baoh Computer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Logo Baoh Computer" class="logo" />
+    <h1>Baoh Computer</h1>
+    <p>Melayani servis laptop & PC panggilan</p>
+    <a href="https://wa.me/6285694288817" target="_blank" class="whatsapp-button">
+      Hubungi via WhatsApp
+    </a>
+  </header>
+
+  <nav class="navbar">
+    <a href="#layanan">Layanan</a>
+    <a href="#testimoni">Testimoni</a>
+    <a href="#galeri">Galeri</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
+
+  <section id="layanan" class="layanan" style="display: block;">
+    <h2>Layanan Kami</h2>
+    <ul>
+      <li>✅ Install Ulang Windows – Rp100.000</li>
+      <li>✅ Bersihkan Virus & Malware – Rp80.000</li>
+      <li>✅ Perbaikan Laptop Mati Total – Mulai Rp150.000</li>
+      <li>✅ Upgrade SSD / RAM – Rp50.000 (jasa)</li>
+      <li>✅ Servis Panggilan ke Rumah – Tambahan Rp30.000</li>
+    </ul>
+  </section>
+
+  <section id="testimoni" class="testimoni" style="display: none;">
+    <h2>Testimoni Pelanggan</h2>
+    <blockquote>"Pelayanan cepat dan laptop saya kembali normal!" – Rudi</blockquote>
+    <blockquote>"Teknisi ramah, profesional, dan datang tepat waktu." – Sari</blockquote>
+  </section>
+
+  <section id="galeri" class="galeri" style="display: none;">
+    <h2>Galeri Foto</h2>
+    <div class="galeri-grid">
+      <img src="gambar1.jpg" alt="Servis 1" />
+      <img src="gambar2.jpg" alt="Servis 2" />
+      <img src="gambar3.jpg" alt="Servis 3" />
+    </div>
+  </section>
+
+  <section id="kontak" class="kontak" style="display: none;">
+    <h2>Hubungi Kami</h2>
+    <form action="mailto:emailanda@example.com" method="post" enctype="text/plain">
+      <input type="text" name="nama" placeholder="Nama Anda" required />
+      <input type="email" name="email" placeholder="Email Anda" required />
+      <textarea name="pesan" placeholder="Tulis pesan Anda..." required></textarea>
+      <button type="submit">Kirim</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Baoh Computer. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const links = document.querySelectorAll('.navbar a');
+    const sections = document.querySelectorAll('section');
+
+    links.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+
+        sections.forEach(section => section.style.display = 'none');
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+          targetSection.style.display = 'block';
+          window.scrollTo({
+            top: targetSection.offsetTop - 50,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
