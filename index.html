@@ -39,7 +39,7 @@
         <div class="service-card">
           <i class="fas fa-laptop"></i>
           <h3>Install Ulang Windows</h3>
-          <p class="price">Rp100.000</p>
+          <p class="price">Rp200.000</p>
           <p>Termasuk driver dan software dasar</p>
         </div>
         <div class="service-card">
@@ -51,7 +51,7 @@
         <div class="service-card">
           <i class="fas fa-power-off"></i>
           <h3>Perbaikan Mati Total</h3>
-          <p class="price">Mulai Rp150.000</p>
+          <p class="price">Mulai Rp250.000</p>
           <p>Diagnosa & perbaikan hardware</p>
         </div>
         <div class="service-card">
@@ -63,7 +63,7 @@
         <div class="service-card">
           <i class="fas fa-home"></i>
           <h3>Servis Panggilan</h3>
-          <p class="price">+Rp30.000</p>
+          <p class="price">+Rp50.000</p>
           <p>Teknisi datang ke lokasi</p>
         </div>
         <div class="service-card">
@@ -96,7 +96,7 @@
         <div class="keunggulan-item">
           <i class="fas fa-money-bill-wave"></i>
           <h3>Harga Transparan</h3>
-          <p>Tidak ada biaya tersembunyi, survey gratis</p>
+          <p>Tidak ada biaya tersembunyi</p>
         </div>
       </div>
     </section>
@@ -107,7 +107,7 @@
         <div class="testimoni-item">
           <div class="rating">★★★★★</div>
           <blockquote>"Laptop saya mati total, teknisi Baoh bisa perbaiki dalam 1 jam. Harga juga reasonable!"</blockquote>
-          <p class="pelanggan">- Rudi, Jakarta Selatan</p>
+          <p class="pelanggan">- Rudi, Jakarta pusat</p>
         </div>
         <div class="testimoni-item">
           <div class="rating">★★★★★</div>
@@ -125,12 +125,12 @@
     <section id="galeri">
       <h2><i class="fas fa-camera"></i> Galeri Pekerjaan Kami</h2>
       <div class="galeri-grid">
-        <img src="galeri1.jpg" alt="Teknisi sedang memperbaiki laptop">
-        <img src="galeri2.jpg" alt="Pembersihan laptop dari debu">
-        <img src="galeri3.jpg" alt="Upgrade SSD pada laptop">
-        <img src="galeri4.jpg" alt="Instalasi sistem operasi">
-        <img src="galeri5.jpg" alt="Perbaikan hardware laptop">
-        <img src="galeri6.jpg" alt="Hasil pekerjaan yang rapi">
+        <img src="galeri1.jpg" alt="RECOVERY Data">
+        <img src="galeri2.jpg" alt="Repair Mainboard">
+        <img src="galeri3.jpg" alt="Flashing Bios">
+        <img src="galeri4.jpg" alt="Cleaning Fan & Re Pasta">
+        <img src="galeri5.jpg" alt="Upgrade Memory Ram">
+        <img src="galeri6.jpg" alt="Re Install Windows">
       </div>
     </section>
 
@@ -153,45 +153,69 @@
     <section id="kontak">
       <h2><i class="fas fa-envelope"></i> Hubungi Kami</h2>
       <div class="kontak-container">
-        <form id="contact-form">
+        <form id="contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
           <div class="form-group">
-            <input type="text" name="nama" placeholder="Nama Lengkap" required>
+            <label for="nama"><i class="fas fa-user"></i> Nama Lengkap</label>
+            <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap Anda" required>
           </div>
           <div class="form-group">
-            <input type="email" name="email" placeholder="Alamat Email" required>
+            <label for="email"><i class="fas fa-envelope"></i> Email</label>
+            <input type="email" id="email" name="email" placeholder="contoh@email.com" required>
           </div>
           <div class="form-group">
-            <input type="tel" name="telepon" placeholder="Nomor Telepon" required>
+            <label for="telepon"><i class="fas fa-phone"></i> Nomor Telepon/WhatsApp</label>
+            <input type="tel" id="telepon" name="telepon" placeholder="0812-3456-7890" required>
           </div>
           <div class="form-group">
-            <select name="layanan" required>
-              <option value="">Pilih Layanan</option>
-              <option value="install">Install Ulang</option>
-              <option value="virus">Bersihkan Virus</option>
+            <label for="layanan"><i class="fas fa-tools"></i> Jenis Layanan</label>
+            <select id="layanan" name="layanan" required>
+              <option value="">Pilih layanan yang dibutuhkan</option>
+              <option value="install">Install Ulang Windows</option>
+              <option value="virus">Bersihkan Virus/Malware</option>
               <option value="hardware">Perbaikan Hardware</option>
               <option value="upgrade">Upgrade SSD/RAM</option>
               <option value="data">Data Recovery</option>
-              <option value="lainnya">Lainnya</option>
+              <option value="jaringan">Jaringan/Internet</option>
+              <option value="lain">Lainnya</option>
             </select>
           </div>
           <div class="form-group">
-            <textarea name="pesan" placeholder="Jelaskan masalah Anda..." required></textarea>
+            <label for="alamat"><i class="fas fa-map-marker-alt"></i> Alamat (Untuk Servis Panggilan)</label>
+            <input type="text" id="alamat" name="alamat" placeholder="Jl. Contoh No. 123, Jakarta">
+          </div>
+          <div class="form-group">
+            <label for="pesan"><i class="fas fa-comment"></i> Detail Masalah</label>
+            <textarea id="pesan" name="pesan" rows="5" placeholder="Jelaskan masalah yang dialami secara detail..." required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="lampiran"><i class="fas fa-paperclip"></i> Lampiran (Opsional)</label>
+            <input type="file" id="lampiran" name="lampiran" accept="image/*,.pdf">
+            <small>Anda bisa mengupload foto error/masalah (maks. 5MB)</small>
           </div>
           <button type="submit" class="submit-btn">
-            <i class="fas fa-paper-plane"></i> Kirim Permintaan
+            <i class="fas fa-paper-plane"></i> Kirim Permintaan Servis
           </button>
         </form>
         <div class="kontak-info">
-          <h3><i class="fas fa-map-marker-alt"></i> Lokasi Kami</h3>
-          <p>Jl. Contoh No. 17B, Jakarta Selatan</p>
+          <div class="info-box">
+            <h3><i class="fas fa-map-marker-alt"></i> Lokasi Kami</h3>
+            <p>Jl. sabang No. 17B, Jakarta Selatan</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d106.81956135000001!3d-6.1947419999999945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTEnNDEuMSJTIDEwNsKwNDknMTAuNCJF!5e0!3m2!1sen!2sid!4v1620000000000!5m2!1sen!2sid" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
           
-          <h3><i class="fas fa-clock"></i> Jam Operasional</h3>
-          <p>Senin - Sabtu: 08.00 - 18.00 WIB</p>
-          <p>Minggu: 10.00 - 15.00 WIB</p>
+          <div class="info-box">
+            <h3><i class="fas fa-clock"></i> Jam Operasional</h3>
+            <p><strong>Senin - Sabtu:</strong> 08.00 - 18.00 WIB</p>
+            <p><strong>Minggu:</strong> 09.00 - 15.00 WIB</p>
+            <p><strong>Hari Libur:</strong> Tersedia dengan appointment</p>
+          </div>
           
-          <h3><i class="fas fa-phone"></i> Kontak Langsung</h3>
-          <p><a href="tel:+62211234567">(021) 123-4567</a></p>
-          <p><a href="https://wa.me/6285694288817" target="_blank">WhatsApp: 0856-9428-8817</a></p>
+          <div class="info-box">
+            <h3><i class="fas fa-phone"></i> Kontak Langsung</h3>
+            <p><a href="tel:+62211234567" class="contact-link"><i class="fas fa-phone"></i> (021) 123-4567</a></p>
+            <p><a href="https://wa.me/6285694288817" target="_blank" class="contact-link whatsapp"><i class="fab fa-whatsapp"></i> 0856-9428-8817</a></p>
+            <p><a href="mailto:info@baohcomputer.com" class="contact-link"><i class="fas fa-envelope"></i> info@baohcomputer.com</a></p>
+          </div>
         </div>
       </div>
     </section>
@@ -200,41 +224,57 @@
   <footer>
     <div class="footer-content">
       <div class="footer-section">
-        <h3>Tentang Kami</h3>
-        <p>Baoh Computer menyediakan layanan servis laptop & PC panggilan profesional sejak 2020. Tim teknisi kami berpengalaman dan bersertifikat.</p>
+        <img src="logo.png" alt="Logo Baoh Computer" class="footer-logo">
+        <h3>Baoh Computer</h3>
+        <p>Layanan servis laptop & komputer panggilan profesional di Jakarta dan sekitarnya.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
       </div>
       <div class="footer-section">
         <h3>Layanan</h3>
         <ul>
-          <li>Perbaikan Hardware</li>
-          <li>Software Troubleshooting</li>
-          <li>Upgrade Komputer</li>
-          <li>Data Recovery</li>
-          <li>Network Setup</li>
+          <li><a href="#layanan">Perbaikan Hardware</a></li>
+          <li><a href="#layanan">Software Troubleshooting</a></li>
+          <li><a href="#layanan">Upgrade Komputer</a></li>
+          <li><a href="#layanan">Data Recovery</a></li>
+          <li><a href="#layanan">Network Setup</a></li>
         </ul>
       </div>
       <div class="footer-section">
-        <h3>Hubungi Kami</h3>
-        <p><i class="fas fa-envelope"></i> info@baohcomputer.com</p>
+        <h3>Links</h3>
+        <ul>
+          <li><a href="#layanan">Layanan</a></li>
+          <li><a href="#keunggulan">Keunggulan</a></li>
+          <li><a href="#testimoni">Testimoni</a></li>
+          <li><a href="#galeri">Galeri</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Kontak</h3>
+        <p><i class="fas fa-map-marker-alt"></i> Jl. Contoh No. 17B, Jakarta Selatan</p>
         <p><i class="fas fa-phone"></i> (021) 123-4567</p>
-        <div class="social-links">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-whatsapp"></i></a>
-          <a href="#"><i class="fab fa-youtube"></i></a>
-        </div>
+        <p><i class="fas fa-envelope"></i> info@baohcomputer.com</p>
       </div>
     </div>
     <div class="copyright">
-      <p>&copy; 2023 Baoh Computer. All rights reserved.</p>
+      <p>&copy; <span id="current-year"></span> Baoh Computer. All rights reserved.</p>
+      <p class="credit">Made with <i class="fas fa-heart"></i> by Baoh Team</p>
     </div>
   </footer>
 
-  <a href="https://wa.me/6285694288817" class="floating-whatsapp" target="_blank">
+  <a href="https://wa.me/6285694288817" class="floating-whatsapp" target="_blank" aria-label="Chat via WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
 
   <script>
+    // Set current year in footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
     // Smooth scroll untuk navigasi
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
@@ -245,11 +285,38 @@
       });
     });
 
-    // Form submission
+    // Form submission dengan Formspree
     document.getElementById('contact-form').addEventListener('submit', function(e) {
       e.preventDefault();
-      alert('Terima kasih! Pesan Anda telah terkirim. Kami akan segera menghubungi Anda.');
-      this.reset();
+      const form = e.target;
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalText = submitBtn.innerHTML;
+      
+      // Tampilkan loading
+      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Mengirim...';
+      submitBtn.disabled = true;
+      
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          // Tampilkan pesan sukses
+          alert('Terima kasih! Permintaan servis Anda telah terkirim. Kami akan menghubungi Anda dalam waktu 1 jam.');
+          form.reset();
+        } else {
+          throw new Error('Network response was not ok');
+        }
+      }).catch(error => {
+        alert('Maaf, terjadi kesalahan. Silakan coba lagi atau hubungi kami via WhatsApp.');
+        console.error('Error:', error);
+      }).finally(() => {
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+      });
     });
 
     // Animasi saat scroll
