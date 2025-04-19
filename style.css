@@ -2,6 +2,14 @@
   --primary: #0056b3;
   --primary-dark: #d3b47b;
   --secondary: #25D366;
+  --error: #ff4444; 
+  --primary: #0056b3;
+  --primary-dark: #d3b47b;
+  --secondary: #25D366;
+  --error: #ff4444; 
+  --primary: #0056b3;
+  --primary-dark: #d3b47b;
+  --secondary: #25D366;
   --secondary-dark: #128C7E;
   --accent: #ff6b00;
   --accent-dark: #e05a00;
@@ -20,7 +28,7 @@
   box-sizing: border-box;
 }
 
-body {
+body {                                                                 
   font-family: 'Poppins', sans-serif;
   background-color: var(--light);
   color: var(--text);
@@ -45,7 +53,7 @@ img {
 }
 
 /* Header Styles */
-header {
+header {                                                                             
   background: linear-gradient(135deg, var(--primary), var(--primary-dark));
   color: var(--lighter);
   text-align: center;
@@ -66,7 +74,7 @@ header::after {
   z-index: 1;
 }
 
-.logo {
+.logo {                                                             
   width: 100px;
   height: 100px;
   border-radius: 0;
@@ -80,18 +88,18 @@ header::after {
   background-color: var(--lighter);
 }
 
-.logo:hover {
+.logo:hover {                                                    
   transform: scale(1.05);
 }
 
 header h1 {
-  font-size: 2.5rem;
+  font-size: 2.5rem;                
   margin-bottom: 0.5rem;
   position: relative;
   z-index: 2;
 }
 
-.tagline {
+.tagline {                       
   font-size: 1.2rem;
   margin: 0.5rem auto 1.5rem;
   max-width: 800px;
@@ -102,7 +110,7 @@ header h1 {
 }
 
 /* Button Styles */
-.cta-container {
+.cta-container {                      
   display: flex;
   gap: 1rem;
   justify-content: center;
@@ -645,6 +653,98 @@ footer::before {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
+   .contact-form {
+    background: var(--lighter);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .contact-form__group {
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+  
+  .contact-form__label {
+    display: block;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 0.5rem;
+  }
+  
+  .contact-form__input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--light-gray);
+    border-radius: 5px;
+    transition: border 0.3s ease;
+  }
+  
+  .contact-form__input:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.1);
+  }
+  
+  /* Modifiers */
+  .contact-form__input--error {
+    border-color: var(--error);
+    background-color: #fff6f6;
+  }
+  
+  .contact-form__error-message {
+    color: var(--error);
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+    display: none;
+  }
+  
+  .contact-form__group--error .contact-form__error-message {
+    display: block;
+  }
+  
+  .contact-form__submit {
+    background-color: var(--primary);
+    color: var(--lighter);
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .contact-form__submit:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+  }
+  
+  .contact-form__submit--disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  /* Animasi Spinner */
+  .fa-spinner {
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Responsive khusus form */
+  @media (max-width: 768px) {
+    .contact-form {
+      padding: 1.5rem;
+    }
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+  }
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   header {
@@ -729,6 +829,19 @@ footer::before {
     font-size: 1.5rem;
     bottom: 1.5rem;
     right: 1.5rem;
+      position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 60px;
+  font-size: 30px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  z-index: 100;
   }
 }
 /* === Gaya Form Kontak === */
@@ -804,4 +917,61 @@ footer {
   text-align: center;
   margin-top: 30px;
   color: #777;
+}
+
+   .success-message {
+    text-align: center;
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    margin: 20px 0;
+    color: #28a745;
+    border: 1px solid #d4edda;
+  }
+  
+  .success-message i {
+    font-size: 50px;
+    margin-bottom: 15px;
+    display: block;
+  }
+  
+  .success-message h3 {
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+  
+  .success-message p {
+    font-size: 16px;
+    color: #6c757d;
+  }
+  
+  /* Animasi Spinner */
+  .fa-spinner {
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Responsive Form */
+  @media (max-width: 768px) {
+    .kontak-container {
+      grid-template-columns: 1fr;
+    }
+    
+    .success-message {
+      padding: 20px;
+    }
+  }
+  .map-frame {
+  width: 100%;
+  height: 200px;
+  border: 0;
+}
+.map-frame {
+  width: 100%;
+  height: 200px;
+  border: 0;
 }
