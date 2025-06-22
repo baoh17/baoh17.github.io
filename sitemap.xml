@@ -4,9 +4,15 @@
     <loc>https://baoh17.github.io/</loc>
   </url>
   <url>
-    <loc>https://baoh17.github.io/tentang.html</loc>
+    <loc>https://baoh17.github.io/#tentang</loc>
   </url>
   <url>
-    <loc>https://baoh17.github.io/kontak.html</loc>
+    <loc>https://baoh17.github.io/#kontak</loc>
+  </url>
+  <url>
+    <loc>https://baoh17.github.io/#layanan</loc>
+  </url>
+  <url>
+    <loc>https://baoh17.github.io/#galeri</loc>
   </url>
 </urlset>
